@@ -1,0 +1,121 @@
+AAQI Basic IT Helpdesk Toolkit
+
+Developed by Muhammad Asadullah | Aaqi Soft Solutions
+1. About the project
+AAQI Basic IT Helpdesk is a Windows-based command-line troubleshooting tool developed using a .bat (Batch) file.
+
+Its purpose is to help users and beginner IT technicians perform common computer, network, and system checks from one simple menu instead of manually typing commands in Command Prompt.
+
+The tool also includes selected repair functions, confirmation prompts, and automatic diagnostic reports.
+2. Features
+No.	Feature	Purpose
+1	IP Configuration	Displays IP, gateway, DNS and subnet details
+2	Internet Connection Test	Tests internet connectivity
+3	Default Gateway Test	Checks router connectivity
+4	DNS Lookup Test	Tests domain name resolution
+5	Flush DNS Cache	Clears cached DNS records
+6	Renew IP Address	Requests a new DHCP address
+7	Network Adapter Status	Displays network adapter status
+8	System Information	Displays Windows and hardware details
+9	Disk Space Check	Shows storage capacity and free space
+10	Windows System File Scan	Uses SFC to scan Windows system files
+
+Additional features
+- Green text for the main menu and normal output.
+- Red text for scanning operations and warnings.
+- Confirmation using YES before repair actions.
+- Automatic TXT and HTML diagnostic reports.
+- Reports saved in a reports folder.
+- Simple numbered interface.
+3. How does it work?
+The application uses Windows built-in commands and PowerShell.
+1. User selects an option from the numbered menu.
+2. Batch script executes the relevant Windows command.
+3. Results appear in the Command Prompt.
+4. Repair actions request confirmation before making changes.
+5. Results are recorded in a TXT report.
+6. On exit, PowerShell generates an HTML version of the report.
+Example commands used
+Task	Windows command
+IP details	ipconfig /all
+Internet test	ping 1.1.1.1
+DNS test	nslookup www.microsoft.com
+Clear DNS	ipconfig /flushdns
+Renew IP	ipconfig /release and ipconfig /renew
+Adapter status	netsh interface show interface
+System details	systeminfo
+Disk information	PowerShell Get-CimInstance
+System file repair	sfc /scannow
+
+
+
+4. How to clone the project from GitHub
+Cloning means downloading a copy of a GitHub repository to your computer.
+
+
+
+
+
+
+
+
+
+Step 1 — Open the repository
+
+Visit your GitHub project page and click the green Code button.
+
+
+
+
+
+
+
+
+
+
+
+Step 2 — Copy the HTTPS URL
+
+Copy the repository URL from the HTTPS section.
+
+
+
+
+
+
+
+
+
+
+
+Step 3 — Open CMD
+
+Navigate to the folder where you want the project.
+
+
+
+Run this command:
+git clone https://github.com/YOUR-USERNAME/AAQI-Basic-IT-Helpdesk.git
+
+
+Replace YOUR-USERNAME with your actual GitHub username.
+
+Then:
+cd AAQI-Basic-IT-Helpdesk
+
+
+Run the application:
+AAQI_Basic_IT_Helpdesk.bat
+
+
+You need Git installed on your computer.
+
+Get Git here: Download Git.
+5. How to upload future updates
+After changing your project files, run:
+git add .
+git commit -m "Update helpdesk toolkit"
+git push
+
+
+This uploads your latest changes to GitHub.
